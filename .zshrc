@@ -77,6 +77,7 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt correct
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -94,3 +95,7 @@ alias pn='pnpm'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval $(thefuck --alias)
+
+# bun completions
+[ -s "/Users/shiroyasha/.bun/_bun" ] && source "/Users/shiroyasha/.bun/_bun"
